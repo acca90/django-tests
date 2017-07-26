@@ -1,0 +1,22 @@
+{
+  "name": "cello",
+  "authors": [
+    "virgilio <matheusrher@gmail.com>"
+  ],
+  "description": "our future in our hands",
+  "main": "page.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "3.2.1",
+    "react": "^15.6.1",
+    "bootstrap": "3.3.7"
+  }
+}
