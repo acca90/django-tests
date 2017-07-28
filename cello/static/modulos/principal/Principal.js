@@ -7,9 +7,8 @@ var Principal = (function ($) {
     var principal = {};
 
     var init = function () {
-        $('#helloworld').show();
+        //$('#helloworld').show();
     };
-
 
 
     principal.init = init;

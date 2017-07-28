@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% load compress %}
+
+{% block content %}
+
+
+    <div class="alert alert-info alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Weeeee!</strong> naisse tu mit iu
+    </div>
+
+    <!-- Contextual button for informational alert messages -->
+    <a type="button" href="{% url 'cliente_inserir' %}" class="btn btn-info">Inserir</a>
+
+    <!-- Indicates caution should be taken with this action -->
+    <a type="button" href="{% url 'cliente_editar' %}" class="btn btn-warning">Editar</a>
+
+    <!-- Indicates a dangerous or potentially negative action -->
+    <a type="button" href="{% url 'cliente_deletar' %}" class="btn btn-danger">Deletar</a>
+
+
+
+    <script src="{% static "modulos/cliente/Cliente.js" %}"></script>
+
+{% endblock %}

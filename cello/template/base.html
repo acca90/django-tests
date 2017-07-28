@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Cello</title>
-        <link href="{% static "bootstrap/dist/css/bootstrap.css" %}" rel="stylesheet">
+        <link href="{% static "bower_components/bootstrap/dist/css/bootstrap.css" %}" rel="stylesheet">
     </head>
     <body>
 
@@ -21,15 +21,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Cello</a>
+                    <a class="navbar-brand" href="{% url 'index' %}">Cello</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="/">Principal <span class="sr-only">(current)</span></a></li>
-                        <li><a href="/produto/">Clientes</a></li>
-                        <li><a href="/cliente/">Produtos</a></li>
+                        <li><a href="/cliente/">Clientes</a></li>
+                        <li><a href="/produto/">Produtos</a></li>
                     </ul>
 
                 </div><!-- /.navbar-collapse -->
@@ -40,8 +40,8 @@
         {% endblock %}
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="{% static "jquery/dist/jquery.min.js" %}"></script>
+        <script src="{% static "bower_components/jquery/dist/jquery.min.js" %}"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="{% static "bootstrap/dist/js/bootstrap.min.js" %}"></script>
+        <script src="{% static "bower_components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
     </body>
 </html>

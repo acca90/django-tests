@@ -1,0 +1,24 @@
+Django pendências:
+
+Models
+Versionamento
+Permissões
+https://www.vinta.com.br/blog/2016/controlling-access-a-django-permission-apps-comparison/
+Permissões granulares
+handlers para falhas de acessos
+pool de conexões para o BD
+acesso dinânimco? (! é possível)
+tratamento de erros?
+Servidor de e-mail? 
+
+
+JavaScript
+
+react?
+jQuery?
+plugins adicionais?
+máscaras
+* campos numéricos
+
+CSS
+SASS compilado em tempo real

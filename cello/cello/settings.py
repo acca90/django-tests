@@ -61,19 +61,27 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             'template',
-            'principal'
+            'template/modulos'
         ],
-        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'loaders': [
+                'django.template.loaders.filesystem.Loader',
+                'django.template.loaders.app_directories.Loader',
+
+            ]
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'cello.wsgi.application'
 
@@ -129,7 +137,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/bower_components/'
+STATIC_URL = '/static/'
+STATIC_ROOT = 'static'
 
 BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
@@ -140,16 +149,7 @@ STATICFILES_FINDERS = [
     'compressor.finders.CompressorFinder'
 ]
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "principal", "static"),
-    os.path.join(BASE_DIR, "static")
-]
 
-
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-)
 
 BOWER_INSTALLED_APPS = (
     'jquery#3.2.1',
