@@ -1,12 +1,14 @@
-from django.shortcuts import render
-from django.template import loader, RequestContext
-from django.views import View
+from django.views.generic import TemplateView
+from django.apps import apps
 
 
-class Principal(View):
+class Principal(TemplateView):
     template_name = 'principal/index.html'
+    apps = apps.get_models()
 
-    def get(self, request):
-        context = RequestContext(request)
+    def get_context_data(self, **kwargs):
+        context = super(Principal, self).get_context_data(**kwargs)
 
-        return render(request, self.template_name)
+        context['modulos'] = {}
+
+        return context

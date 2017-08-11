@@ -33,11 +33,17 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+CELLO_APPS = [
+    'produto',
+    'cliente',
+    'principal'
+]
+
+INSTALLED_APPS = CELLO_APPS + [
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'djangobower',

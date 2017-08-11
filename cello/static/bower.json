@@ -17,6 +17,8 @@
   "dependencies": {
     "jquery": "3.2.1",
     "react": "^15.6.1",
-    "bootstrap": "3.3.7"
+    "bootstrap": "3.3.7",
+    "startbootstrap-simple-sidebar": "https://github.com/BlackrockDigital/startbootstrap-simple-sidebar.git#^3.3.7",
+    "bootstrap-table": "https://github.com/wenzhixin/bootstrap-table.git#^1.11.1"
   }
 }
